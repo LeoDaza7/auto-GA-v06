@@ -11,10 +11,10 @@ import uitesting.upb.org.managepage.BasePage;
  */
 public class Home extends BasePage {
 
-    @FindBy(xpath = "")
+    @FindBy(id = "accountNameInput")
     private WebElement searchTextField;
 
-    @FindBy(css = "")
+    @FindBy(id = "addAccountButton")
     private WebElement searchButton;
 
     public Home searchText(String text){
@@ -22,7 +22,7 @@ public class Home extends BasePage {
         return this;
     }
 
-    public void clickSearchButton(){
+    public void clickSearchButton() {
         Events.click(searchButton);
     }
 
