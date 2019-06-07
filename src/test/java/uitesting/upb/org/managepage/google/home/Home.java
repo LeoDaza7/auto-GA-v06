@@ -26,6 +26,10 @@ public class Home extends BasePage {
         Events.click(searchButton);
     }
 
+    public boolean isSearchFieldVisible(){
+        return Events.isVisibleWebElement(searchTextField);
+    }
+
     public void searchTextAndClickSearchButton(String text){
         searchText(text).clickSearchButton();
     }
