@@ -7,7 +7,7 @@ import uitesting.upb.org.handlewebsite.LoadPage;
 import uitesting.upb.org.managepage.google.home.Home;
 
 public class GoogleHomeStepdefs {
-    private Home home;
+    /*private Home home;
     @Given("^Google page is loaded$")
     public void googlePageIsLoaded() {
         home = LoadPage.loadGoogleHome();
@@ -16,6 +16,6 @@ public class GoogleHomeStepdefs {
     public void theSearchFieldIsVisible() {
         boolean isSearchFieldVisible = home.isSearchFieldVisible();
         Assert.assertTrue(isSearchFieldVisible);
-    }
+    }*/
 
 }

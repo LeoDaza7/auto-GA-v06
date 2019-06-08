@@ -11,7 +11,30 @@ import uitesting.upb.org.managepage.BasePage;
  */
 public class Home extends BasePage {
 
-    @FindBy(id = "accountNameInput")
+    @FindBy(id = "nav-button")
+    private WebElement nasaNavButton;
+
+    @FindBy(xpath = "/html/body/div[1]")
+    private WebElement nasaNavBar;
+
+    @FindBy(xpath = "//*[@id=\"tocify-header1\"]/li")
+    private WebElement nasaAPIListingButton;
+
+    public void clickNasaAPIListingButton(){
+        Events.click(nasaAPIListingButton);
+    }
+
+    public Home clickNasaNavButton() {
+        Events.click(nasaNavButton);
+        return this;
+
+    }
+
+    public void clickAndClick(){
+        //clickNasaNavButton().clickNasaAPIListingButton();
+    }
+
+    /*@FindBy(id = "accountNameInput")
     private WebElement searchTextField;
 
     @FindBy(id = "addAccountButton")
@@ -32,5 +55,5 @@ public class Home extends BasePage {
 
     public void searchTextAndClickSearchButton(String text){
         searchText(text).clickSearchButton();
-    }
+    }*/
 }

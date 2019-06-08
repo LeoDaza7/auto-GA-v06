@@ -10,12 +10,14 @@ import uitesting.upb.org.webdrivermanager.DriverManager;
  */
 public class LoadPage {
     public static Home loadGoogleHome(){
+        DriverManager.getInstance().getWebDriver().manage().window().maximize();
         DriverManager.getInstance().getWebDriver().navigate().to(PropertyAccesor.getInstance().getBaseURL());
         return new Home();
     }
 
     public static void main(String[] args) {
-        loadGoogleHome().searchTextAndClickSearchButton("Cert Account");
+
+        loadGoogleHome().clickNasaAPIListingButton();
         //GoogleHomeStepdefs
     }
 }
